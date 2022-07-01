@@ -1,0 +1,20 @@
+name: Hooks
+
+on:
+  pull_request:
+
+jobs:
+  fe:
+    name: 'Run Hooks'
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-python@v3
+
+    - name: "Install pre-commit"
+      run: pip install pre-commit
+
+    - name: "Run hooks"
+      run: |
+        cd $GITHUB_WORKSPACE && pre-commit && pre-commit run --all-files

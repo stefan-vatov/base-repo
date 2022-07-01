@@ -43,7 +43,7 @@ Install my-project with npm
   npm install my-project
   cd my-project
 ```
-    
+
 ## Run Locally
 
 Clone the project
@@ -80,4 +80,3 @@ Answer 1
 #### Question 2
 
 Answer 2
-
